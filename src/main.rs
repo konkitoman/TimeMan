@@ -6,7 +6,7 @@ use clap::{Parser, Subcommand};
 #[derive(Parser)]
 pub struct TimeMan {
     /// The date format
-    #[arg(short = 'f', default_value = "%a, %d %b %Y %T %z", help = "Testing")]
+    #[arg(short = 'f', default_value = "%a, %d %b %Y %T %z")]
     format: String,
 
     /// UTC/Universal
@@ -19,7 +19,10 @@ pub struct TimeMan {
 
 #[derive(Subcommand)]
 pub enum TimeManCommand {
+    /// get the current time you can use `-o` before to set the utc offset
     Now,
+
+    /// alias: s
     #[command(alias = "s")]
     Since {
         date: String,
@@ -27,6 +30,8 @@ pub enum TimeManCommand {
         #[arg(short)]
         preety: bool,
     },
+
+    /// alias: -
     #[command(alias = "-")]
     Sub {
         from_date: String,
@@ -35,16 +40,22 @@ pub enum TimeManCommand {
         #[arg(short)]
         preety: bool,
     },
+
+    /// alias: -d
     #[command(alias = "-d")]
     SubDuration {
         from_date: String,
         duration: String,
     },
+
+    /// alias: +d
     #[command(alias = "+d")]
     AddDuration {
         from_date: String,
         duration: String,
     },
+
+    /// alias: t
     #[command(alias = "t")]
     Translate {
         date: String,

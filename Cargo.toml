@@ -1,6 +1,8 @@
 [package]
 name = "timeman"
-version = "0.1.0"
+authors = ["konkitoman"]
+keywords = ["time", "date", "time-date", "time-date-manipulator", "time-date-calculator", "time-calculator", "date-calculator"]
+version = "1.0.0"
 edition = "2021"
 
 [[bin]]
@@ -11,4 +13,4 @@ path = "src/main.rs"
 
 [dependencies]
 chrono = "0.4.38"
-clap = { version = "4.5.4", features = ["derive"] }
+clap = { version = "4.5.4", features = ["derive", "color"] }

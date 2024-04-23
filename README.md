@@ -1,5 +1,7 @@
 # TimeMan (cli)
 
+[![Crates.io](https://img.shields.io/crates/v/timeman.svg)](https://crates.io/crates/timeman)
+
 Is a time and date calculator.
 
 ## How to use

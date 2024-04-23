@@ -1,10 +1,12 @@
 [package]
 name = "timeman"
 authors = ["konkitoman"]
-keywords = ["time", "date", "time-date", "time-date-manipulator", "time-date-calculator", "time-calculator", "date-calculator"]
+keywords = ["cli", "time", "date", "time-date", "time-date-calculator", "time-calculator", "date-calculator"]
 version = "1.0.0"
 edition = "2021"
 repository = "https://github.com/konkitoman/TimeMan"
+description = "Is a time and date calculator"
+license = "MIT"
 
 [[bin]]
 name = "tm"
